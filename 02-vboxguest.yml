@@ -1,0 +1,8 @@
+---
+
+- hosts: new_host
+  roles:
+    - vboxguest
+  vars:
+    - vboxguest_version: 6.1.30
+    - vboxguest_remove: true

@@ -1,0 +1,16 @@
+
+[new_host]
+node01.home.org  ansible_host=192.168.1.88   # 080027F7BA34
+node02.home.org  ansible_host=192.168.1.87   # 08002724CC29
+
+
+
+# В том случае если есть пользователь ansbl и добавлен доступ по ключу
+[new_host:vars]
+ansible_become=yes
+ansible_ssh_user=ansbl
+ansible_ssh_private_key_file=/root/ansible/.private/ssh_host_rsa_key
+ansible_become_method=sudo
+ansible_ssh_common_args="-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
+
+
